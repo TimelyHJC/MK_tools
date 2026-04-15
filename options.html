@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>扩展设置</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      html { margin: 0; min-height: 100%; box-sizing: border-box; }
+      body {
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        max-width: 480px;
+        min-width: 320px;
+        min-height: 100vh;
+        overflow: auto;
+        box-sizing: border-box;
+        background: #f7f7f7;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #1a1a1a;
+      }
+      #root { width: 100%; }
+      .seq-map-table tbody tr { transition: background 0.15s ease; }
+      .seq-map-table tbody tr:hover { background: #f0f0f0; }
+      .opt-btn:hover { opacity: 0.9; transform: translateY(-0.5px); }
+      .opt-btn:active { transform: translateY(0); }
+      .opt-btn { transition: opacity 0.15s, transform 0.15s, box-shadow 0.15s; }
+      .opt-card { box-shadow: 0 1px 4px rgba(0,0,0,0.06); transition: box-shadow 0.2s; }
+      .opt-card:hover { box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+      .opt-input:focus { outline: none; border-color: #047857; box-shadow: 0 0 0 2px rgba(4,120,87,0.2); }
+      .opt-input { transition: border-color 0.15s, box-shadow 0.15s; }
+      .opt-add-zone { transition: border-color 0.15s, background 0.15s; }
+      .opt-add-zone:hover { border-color: #9ca3af; background: #f0f0f0; }
+      ::-webkit-scrollbar { width: 6px; height: 6px; }
+      ::-webkit-scrollbar-track { background: #eee; border-radius: 3px; }
+      ::-webkit-scrollbar-thumb { background: #bbb; border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: #999; }
+    </style>
+    <script type="module" crossorigin src="./options.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/_commonjsHelpers-Cpj98o6Y.js">
+    <link rel="modulepreload" crossorigin href="./assets/client-jWyLZdKA.js">
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="form-url-section" style="margin:12px;padding:12px;background:#fff;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+      <div style="margin-bottom:8px;">
+        <span style="font-size:13px;color:#374151;">钉钉表单地址：</span>
+      </div>
+      <input type="text" id="form-url-input" class="opt-input" placeholder="https://...（用于同步表单）" style="width:100%;padding:8px 12px;border:1px solid #d1d5db;border-radius:6px;font-size:14px;box-sizing:border-box;">
+      <div style="margin-top:12px;margin-bottom:8px;">
+        <span style="font-size:13px;color:#374151;">钉钉表格地址：</span>
+      </div>
+      <input type="text" id="table-url-input" class="opt-input" placeholder="https://...（用于打开表单）" style="width:100%;padding:8px 12px;border:1px solid #d1d5db;border-radius:6px;font-size:14px;box-sizing:border-box;">
+    </div>
+    <script src="./options-form-url.js"></script>
+  </body>
+</html>
