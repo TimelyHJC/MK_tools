@@ -4,7 +4,7 @@ $root = $PSScriptRoot
 Set-Location $root
 
 $required = @(
-  "manifest.json", "content.js", "background.js", "popup.js", "options.js",
+  "manifest.json", "content.js", "content-data-field-id.js", "background.js", "popup.js", "options.js",
   "options-form-url.js", "options.html", "index.html", "fix-nullish.js",
   "assets"
 )
