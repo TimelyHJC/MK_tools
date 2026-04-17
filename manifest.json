@@ -27,13 +27,5 @@
       },
       "description": "打开/关闭页面弹出面板"
     }
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js", "content-data-field-id.js"],
-      "run_at": "document_idle",
-      "all_frames": false
-    }
-  ]
+  }
 }
