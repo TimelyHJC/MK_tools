@@ -1,10 +1,15 @@
 @echo off
+setlocal EnableExtensions
 chcp 65001 >nul
 title Pack MK-tool
 cd /d "%~dp0"
 
+set "PS_EXE=powershell"
+where pwsh >nul 2>nul
+if not errorlevel 1 set "PS_EXE=pwsh"
+
 echo [MK-tool] Packing...
-powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0pack.ps1"
+"%PS_EXE%" -NoProfile -ExecutionPolicy Bypass -File "%~dp0pack.ps1"
 if errorlevel 1 goto :fail
 
 echo.
