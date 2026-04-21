@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "MK-tool",
   "description": "一键提取图片和文件、三图资料下载、配置默认文件、提取字段、钉钉表单同步",
-  "version": "1.1.5",
+  "version": "1.1.15",
   "icons": {
     "96": "icon96.png"
   },
